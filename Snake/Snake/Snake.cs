@@ -57,7 +57,6 @@ namespace Snake
         {
             Point head = GetNextPoint();
             if (head.IsHit(food))
-            //if(head.x == food.x && head.y == food.y)
             {
                 food.sym = head.sym;
                 pList.Add(food);
