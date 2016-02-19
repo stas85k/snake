@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Snake
@@ -20,11 +21,15 @@ namespace Snake
 
         public override void Draw()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
+            Console.ForegroundColor = ConsoleColor.Cyan;
+           
             base.Draw();
-
-            Console.ForegroundColor = ConsoleColor.White;
+            Thread.Sleep(300);
+            Console.ForegroundColor = ConsoleColor.Black;
+            base.Draw();
+            Thread.Sleep(300);
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            base.Draw();
         }
     }
 }
