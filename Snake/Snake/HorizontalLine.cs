@@ -19,7 +19,7 @@ namespace Snake
             }
         }
 
-        public override void Draw()
+        /*public override void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
            
@@ -31,5 +31,6 @@ namespace Snake
             Console.BackgroundColor = ConsoleColor.Yellow;
             base.Draw();
         }
+        */
     }
 }

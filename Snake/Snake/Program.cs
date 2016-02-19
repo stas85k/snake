@@ -16,8 +16,8 @@ namespace Snake
             walls.Draw();
             
             //The points are drawn
-            Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            Point p1 = new Point(4, 5, '*');
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
             snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(128, 28, '$');
