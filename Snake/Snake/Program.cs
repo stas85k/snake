@@ -13,16 +13,25 @@ namespace Snake
             Console.SetBufferSize(120, 30);
 
             Walls walls = new Walls(120, 30);
+            Console.ForegroundColor = ConsoleColor.Red;
+
             walls.Draw();
 
             //The points are drawn
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             snake.Draw();
 
             FoodCreator foodCreator = new FoodCreator(120, 30, '$');
             Point food = foodCreator.CreateFood();
+
             food.Draw();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
 
             while (true)
             {
@@ -33,7 +42,13 @@ namespace Snake
                 if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
+
+                    Console.ForegroundColor = ConsoleColor.Green;
+
                     food.Draw();
+
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+
                 }
                 else
                 {
